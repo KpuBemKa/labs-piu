@@ -1,5 +1,6 @@
 package com.example.authform
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -24,10 +25,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            val userStorage = UserStorage("users.json")
-            userStorage.ReadFromFile(baseContext)
-            Json
-
             val usernameTextState = rememberTextFieldState()
             val passwordTextState = rememberTextFieldState()
             AuthFormTheme {
@@ -52,6 +49,16 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    private fun onLogin(
+        username: CharSequence,
+        password: CharSequence,
+    ) {
+//        userStorage.authenticateUser(username.toString(), password.toString(), baseContext)
+        startActivity(Intent(this, SettingsActivity::class.java))
+    }
+
+    private val userStorage = UserStorage("users.json")
 }
 
 @Composable
@@ -68,10 +75,3 @@ fun Credentials(
     }
 }
 
-fun onLogin(
-    username: CharSequence,
-    password: CharSequence,
-) {
-    Log.d("TEST",  username.toString())
-    Log.d("TEST", password.toString())
-}
