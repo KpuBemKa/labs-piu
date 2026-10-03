@@ -26,7 +26,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             val userStorage = UserStorage("users.json")
             userStorage.ReadFromFile(baseContext)
-            Json
 
             val usernameTextState = rememberTextFieldState()
             val passwordTextState = rememberTextFieldState()
@@ -40,9 +39,11 @@ class MainActivity : ComponentActivity() {
                         )
                         Button(
                             onClick = fun() {
-                                onLogin(
-                                    usernameTextState.text,
-                                    passwordTextState.text
+                                Log.d(
+                                    "TEST", userStorage.DoesUserExist(
+                                        usernameTextState.text.toString(),
+                                        passwordTextState.text.toString()
+                                    ).toString()
                                 )
                             },
                             modifier = Modifier.padding(innerPadding)
@@ -72,6 +73,6 @@ fun onLogin(
     username: CharSequence,
     password: CharSequence,
 ) {
-    Log.d("TEST",  username.toString())
+    Log.d("TEST", username.toString())
     Log.d("TEST", password.toString())
 }

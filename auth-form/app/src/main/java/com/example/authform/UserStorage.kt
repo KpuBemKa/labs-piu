@@ -1,18 +1,16 @@
 package com.example.authform
 
 import android.content.Context
-import android.util.JsonReader
-import android.util.Log
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import java.io.FileReader
-import java.io.InputStream
-import java.io.InputStreamReader
+
 
 @Serializable
 data class User(
-    @SerialName(value = "idUsername") val username: String?,
-    @SerialName(value = "idPassword") val password: String?
+    @SerialName(value = "username") val username: String,
+    @SerialName(value = "password") val password: String?
 )
 
 class UserStorage {
@@ -22,12 +20,20 @@ class UserStorage {
 
     fun ReadFromFile(context: Context) {
         val jsonString = context.assets.open(filePath).bufferedReader().use { it.readText() }
-
-        Log.d("TEST", jsonString)
+        users.addAll(parseJsonToModel(jsonString))
     }
 
     fun DoesUserExist(username: String, password: String): Boolean {
-        return false;
+        return users.find { it.username == username && it.password == password } != null
+    }
+
+    private fun parseJsonToModel(jsonString: String): List<User> {
+        try {
+            val sType = object : TypeToken<List<User>>() {}.type
+            return Gson().fromJson<List<User>>(jsonString, sType)
+        } catch (ex: Exception) {
+            return emptyList()
+        }
     }
 
     private val filePath: String;
