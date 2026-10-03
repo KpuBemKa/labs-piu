@@ -20,11 +20,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.authform.ui.theme.AuthFormTheme
 
+val g_userStorage = UserStorage("users.json")
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val userStorage = UserStorage("users.json")
+            userStorage.ReadFromFile(baseContext)
+            Json
+
             val usernameTextState = rememberTextFieldState()
             val passwordTextState = rememberTextFieldState()
             AuthFormTheme {
@@ -38,8 +44,8 @@ class MainActivity : ComponentActivity() {
                         Button(
                             onClick = fun() {
                                 onLogin(
-                                    usernameTextState.text,
-                                    passwordTextState.text
+                                    usernameTextState.text.toString(),
+                                    passwordTextState.text.toString()
                                 )
                             },
                             modifier = Modifier.padding(innerPadding)
@@ -75,3 +81,10 @@ fun Credentials(
     }
 }
 
+fun onLogin(
+    username: CharSequence,
+    password: CharSequence,
+) {
+    Log.d("TEST",  username.toString())
+    Log.d("TEST", password.toString())
+}
