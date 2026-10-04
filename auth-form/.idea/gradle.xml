@@ -8,8 +8,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="/run/media/system/ssd-240/dev/projects/labs-piu/auth-form" />
-            <option value="/run/media/system/ssd-240/dev/projects/labs-piu/auth-form/app" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>
