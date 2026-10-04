@@ -58,7 +58,9 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        startActivity(Intent(this, HomePageActivity::class.java))
+        val intent = Intent(this, HomePageActivity::class.java)
+        intent.putExtra("username", usernameString)
+        startActivity(intent)
         finish()
     }
 

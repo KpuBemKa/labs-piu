@@ -1,0 +1,85 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Amintiri din copilarie",
+      "author": "Ion Creanga",
+      "year": 1892,
+      "genre": "Memorii",
+      "pages": 160,
+      "description": "Povestea copilariei lui Nica din satul Humulesti, plina de umor si de intamplari hazlii."
+    },
+    {
+      "id": 2,
+      "title": "Ion",
+      "author": "Liviu Rebreanu",
+      "year": 1920,
+      "genre": "Roman",
+      "pages": 480,
+      "description": "Romanul unui taran ardelean dominat de dorinta de a avea pamant."
+    },
+    {
+      "id": 3,
+      "title": "Enigma Otiliei",
+      "author": "George Calinescu",
+      "year": 1938,
+      "genre": "Roman",
+      "pages": 420,
+      "description": "Felix Sima vine la Bucuresti si locuieste in casa lui mos Costache, unde o cunoaste pe Otilia."
+    },
+    {
+      "id": 4,
+      "title": "Morometii",
+      "author": "Marin Preda",
+      "year": 1955,
+      "genre": "Roman",
+      "pages": 510,
+      "description": "Viata familiei lui Ilie Moromete intr-un sat din Campia Dunarii, inainte de razboi."
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "genre": "Distopie",
+      "pages": 328,
+      "description": "Winston Smith traieste intr-o societate totalitara unde Fratele cel Mare vede tot."
+    },
+    {
+      "id": 6,
+      "title": "Micul Print",
+      "author": "Antoine de Saint-Exupery",
+      "year": 1943,
+      "genre": "Poveste",
+      "pages": 96,
+      "description": "Un pilot prabusit in desert intalneste un baiat venit de pe o alta planeta."
+    },
+    {
+      "id": 7,
+      "title": "Crima si pedeapsa",
+      "author": "F. M. Dostoievski",
+      "year": 1866,
+      "genre": "Roman",
+      "pages": 560,
+      "description": "Studentul Raskolnikov comite o crima si apoi se lupta cu propria constiinta."
+    },
+    {
+      "id": 8,
+      "title": "Harry Potter si piatra filozofala",
+      "author": "J. K. Rowling",
+      "year": 1997,
+      "genre": "Fantasy",
+      "pages": 320,
+      "description": "Harry afla ca este vrajitor si pleaca la scoala Hogwarts."
+    },
+    {
+      "id": 9,
+      "title": "Baltagul",
+      "author": "Mihail Sadoveanu",
+      "year": 1930,
+      "genre": "Roman",
+      "pages": 200,
+      "description": "Vitoria Lipan pleaca in cautarea sotului ei, Nechifor, care nu s-a mai intors acasa."
+    }
+  ]
+}

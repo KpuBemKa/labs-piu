@@ -27,8 +27,13 @@
             android:name=".HomePageActivity"
             android:exported="false"
             android:label="@string/title_activity_home_page"
-            android:theme="@style/Theme.AppCompat"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".BookDetailsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_book_details"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
     </application>
 
 </manifest>
